@@ -1,7 +1,7 @@
 {
-  "name": "strapi-plugin-users-permissions",
+  "name": "strapi-plugin-users-permissions-zero-knowledge",
   "version": "3.6.3",
-  "description": "Protect your API with a full-authentication process based on JWT",
+  "description": "Protect your API with a full-authentication process based on JWT. Optimized for zero knowledge.",
   "strapi": {
     "name": "Roles & Permissions",
     "icon": "users",

@@ -216,6 +216,21 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/auth/local/salt/:id",
+      "handler": "UsersPermissions.searchUsers",
+      "config": {
+        "policies": ["plugins::users-permissions.ratelimit"],
+        "description": "Search for users salt",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "findOneField",
+          "field": "salt"
+        }
+      }
+    },
+    {
       "method": "POST",
       "path": "/auth/local/register",
       "handler": "Auth.register",

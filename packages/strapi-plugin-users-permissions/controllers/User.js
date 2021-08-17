@@ -75,6 +75,24 @@ module.exports = {
   },
 
   /**
+   * Retrieve a user records field.
+   * @return {Object}
+   */
+  async findOneField(ctx) {
+    const { id } = ctx.params;
+    let data = await strapi.plugins['users-permissions'].services.user.fetch({
+      id,
+    });
+
+    if (data) {
+      data = sanitizeUser(data);
+    }
+
+    // Send 200 `ok`
+    ctx.body = data;
+  },
+
+  /**
    * Retrieve user count.
    * @return {Number}
    */
